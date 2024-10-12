@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:'Gilroy';
+    }
+    html, body{
+        height: 100%;
+        width: 100%;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: cornflowerblue;
+    }
+    #card{
+        border-radius: 10px;
+        height: 50%;
+        width: 20%;
+        background-color: #fff;
+        padding: 30px;
+        text-align: center;
+    }
+    #card img{
+        height:50%;
+        width:100% ;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+    }
+    #card h1{
+        font-size: 20px;
+        font-weight: 700;
+        margin:10px 0;
+    }
+    #card h5{
+        font-size: 25px;
+        color:red;
+        margin: 20px;
+    }
+    #card button{
+        background-color: cadetblue;
+        color:#fff;
+        font-weight: 700;
+        padding: 12px 20px;
+        border-radius: 5px;
+        border:none;
+        margin: 5px;
+        cursor: pointer;
+    }
+    #card #remove{
+        background-color:  #dadada;
+        color:#111;
+    }
+    </style>
+<body>
+    <div id="card"> 
+    <img src="https://i.pinimg.com/736x/75/80/bc/7580bcd58108f60135aa0942229c2ddd.jpg"alt="">
+    <h1>Uzumaike Naruto</h1>
+    <h5>Stranger</h5>
+    <div id="btn-container">
+        
+        <button id = "add">Add Friend</button>
+    </div>
+</div>
+</body>
+  <script>
+   var istatus = document.querySelector("h5")
+   var btn = document.querySelector("#add")
+   var check = 0
+
+   btn.addEventListener("click",function(){
+    if(check == 0){
+     istatus.innerHTML = "Friend"
+     istatus.style.color = "green"
+     btn.innerHTML = "Remove"
+     check=1
+    } else {
+        istatus.innerHTML = "Stanger"
+        istatus.style.color = "red"
+        btn.innerHTML = "Add Friend"
+        
+        check = 0
+    }
+   })
+
+   removeFriend.addEventListener("click",function(){
+     istatus.innerHTML = "Stanger"
+     istatus.style.color = "red"
+   })
+  </script>
+</html>
